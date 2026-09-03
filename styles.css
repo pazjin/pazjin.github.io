@@ -174,3 +174,280 @@ footer p { margin: 0; }
   .cv-top { flex-direction: column; gap: 8px; }
   .cv-entry { grid-template-columns: 1fr; gap: 4px; }
 }
+
+/* Photography preview on academic homepage */
+.photography-copy { max-width: 700px; }
+.photo-page-link { font-weight: 700; }
+.photo-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+  text-decoration: none;
+}
+.photo-preview-grid:hover { text-decoration: none; }
+.photo-preview-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+.photo-preview-grid:hover img { opacity: 0.94; }
+.photo-preview-grid img:hover { transform: translateY(-2px); opacity: 1; }
+
+/* Photography page */
+.photo-page {
+  min-height: 100vh;
+  background: #fff;
+}
+.photo-container {
+  width: min(calc(100% - 40px), 1180px);
+  margin: 0 auto;
+}
+.photo-header {
+  padding: 44px 0 30px;
+  max-width: 1180px;
+}
+.photo-nav { margin-bottom: 26px; font-size: 0.92rem; }
+.photo-header h1 {
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  margin-bottom: 16px;
+}
+.photo-lead {
+  max-width: 680px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.16rem;
+  line-height: 1.62;
+  color: #333;
+}
+.photo-note {
+  color: var(--light);
+  font-size: 0.86rem;
+  margin-top: 18px;
+}
+.gallery {
+  columns: 3 300px;
+  column-gap: 12px;
+  padding-bottom: 20px;
+}
+.gallery-item {
+  display: block;
+  break-inside: avoid;
+  margin: 0 0 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+  text-decoration: none;
+}
+.gallery-item:hover { text-decoration: none; }
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.008);
+  opacity: 0.96;
+}
+.photo-footer {
+  margin-top: 28px;
+  padding: 24px 0 42px;
+  border-top: 1px solid var(--line);
+  color: var(--light);
+  font-size: 0.84rem;
+}
+.photo-footer p { margin: 0; }
+
+.no-scroll { overflow: hidden; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.94);
+  padding: 26px 70px;
+}
+.lightbox.is-open { display: flex; }
+.lightbox-figure {
+  margin: 0;
+  max-width: min(92vw, 1500px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-figure img {
+  max-width: 100%;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.lightbox-figure figcaption {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.78rem;
+  margin-top: 9px;
+  text-align: center;
+}
+.lightbox-close,
+.lightbox-nav {
+  position: fixed;
+  z-index: 1001;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+.lightbox-close {
+  right: 22px;
+  top: 14px;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.3rem;
+  padding: 16px;
+}
+.lightbox-prev { left: 8px; }
+.lightbox-next { right: 8px; }
+.lightbox-close:hover,
+.lightbox-nav:hover { color: #fff; }
+
+@media (max-width: 730px) {
+  .photo-preview-grid { grid-template-columns: 1fr 1fr; }
+  .photo-preview-grid img:last-child { display: none; }
+  .photo-container { width: min(calc(100% - 24px), 1180px); }
+  .photo-header { padding-top: 28px; }
+  .gallery { columns: 2 150px; column-gap: 8px; }
+  .gallery-item { margin-bottom: 8px; }
+  .lightbox { padding: 20px 44px; }
+  .lightbox-nav { font-size: 2.5rem; padding: 8px; }
+}
+
+
+/* Minimal photography portfolio page */
+.photo-body {
+  background: #fbfbfa;
+  color: #171717;
+}
+.photo-shell {
+  width: min(calc(100% - 40px), 1180px);
+  margin: 0 auto;
+}
+.photo-shell-wide {
+  width: min(calc(100% - 40px), 1440px);
+  margin: 0 auto;
+}
+.photo-header-minimal {
+  padding: 22px 0 34px;
+}
+.photo-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 34px;
+}
+.photo-back,
+.photo-name {
+  font-size: 0.86rem;
+  color: #707070;
+}
+.photo-back {
+  letter-spacing: 0.01em;
+}
+.photo-name {
+  white-space: nowrap;
+}
+.photo-intro {
+  max-width: 760px;
+}
+.photo-eyebrow {
+  margin: 0 0 10px;
+  color: #7d7d7d;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.photo-header-minimal h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: #111;
+}
+.photo-statement {
+  max-width: 680px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.68;
+  color: #2f2f2f;
+  margin-bottom: 10px;
+}
+.photo-meta {
+  color: #8a8a8a;
+  font-size: 0.84rem;
+  letter-spacing: 0.03em;
+}
+.gallery-minimal {
+  columns: 4 260px;
+  column-gap: 14px;
+  padding-bottom: 22px;
+}
+.gallery-item-minimal {
+  display: block;
+  break-inside: avoid;
+  margin: 0 0 14px;
+  text-decoration: none;
+  background: transparent;
+}
+.gallery-item-minimal img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.gallery-item-minimal:hover img {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+.photo-footer-minimal {
+  padding: 18px 0 36px;
+  color: #8a8a8a;
+  font-size: 0.8rem;
+}
+.photo-footer-minimal p { margin: 0; }
+
+.photo-body .lightbox {
+  background: rgba(10,10,10,0.96);
+}
+.photo-body .lightbox-figure figcaption {
+  font-size: 0.76rem;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.68);
+}
+
+@media (max-width: 900px) {
+  .gallery-minimal { columns: 3 220px; }
+}
+@media (max-width: 730px) {
+  .photo-shell,
+  .photo-shell-wide { width: min(calc(100% - 24px), 1440px); }
+  .photo-header-minimal { padding-top: 18px; }
+  .photo-topline {
+    padding-bottom: 26px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .gallery-minimal { columns: 2 150px; column-gap: 8px; }
+  .gallery-item-minimal { margin-bottom: 8px; }
+  .photo-statement { font-size: 1rem; }
+}
