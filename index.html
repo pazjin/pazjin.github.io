@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Yuxin Jin — MSc student at Northwest University working on causal machine learning, causal representation learning, causal discovery, multi-environment learning, and medical AI." />
+  <meta name="author" content="Yuxin Jin" />
+  <meta property="og:title" content="Yuxin Jin" />
+  <meta property="og:description" content="Causal machine learning, causal representation learning, causal discovery, and multi-environment learning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <title>Yuxin Jin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="intro" aria-labelledby="name">
+      <div class="portrait-wrap">
+        <img class="portrait" src="assets/profile.jpg" alt="Portrait of Yuxin Jin" />
+      </div>
+
+      <div class="intro-copy">
+        <h1 id="name">Yuxin Jin</h1>
+        <p class="identity">
+          MSc Student<br />
+          Computer Science and Technology<br />
+          Northwest University
+        </p>
+
+        <p>
+          I am an MSc student in Computer Science and Technology at Northwest University. My research interests lie in
+          <strong>causal machine learning</strong>, <strong>causal representation learning</strong>,
+          <strong>causal discovery</strong>, and <strong>multi-environment learning</strong>. I am particularly interested in learning stable and interpretable causal mechanisms from high-dimensional observations.
+        </p>
+        <p>
+          My previous work focused on medical image analysis, uncertainty-aware learning, multimodal learning, and generalization under distribution shifts. These experiences motivated me to study how causal structure and mechanism changes can support more reliable and transferable machine learning systems.
+        </p>
+        <p>
+          My current research explores causal representation learning under structured environment changes, especially settings where part of the variation across environments is driven by observable physical, biological, or temporal processes.
+        </p>
+
+        <p class="links" aria-label="Profile links">
+          <a href="mailto:pazjin0326@gmail.com">Email</a>
+          <span>·</span>
+          <a href="cv.html">CV</a>
+          <span>·</span>
+          <a href="https://github.com/pazjin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <h2>Publications</h2>
+
+      <article class="publication">
+        <a class="paper-thumb" href="papers/Jin2026_FibUCL.pdf" target="_blank" aria-label="Open FibUCL paper PDF">
+          <img src="assets/fibucl-figure.png" alt="Entropy-guided curriculum partitioning and multimodal fusion architecture from the FibUCL paper" />
+        </a>
+        <div class="paper-copy">
+          <h3><a href="papers/Jin2026_FibUCL.pdf" target="_blank">Uncertainty-Guided Curriculum Learning for Automated Liver Fibrosis Staging on Heterogeneous MRI</a></h3>
+          <p class="authors"><strong>Yuxin Jin</strong>, Fengjun Zhao, Yanrong Chen, Xuelei He</p>
+          <p class="venue"><em>Comprehensive Analysis and Computing of Real-World Medical Images</em> (CARE 2025), Lecture Notes in Computer Science, vol. 16257, Springer, 2026.</p>
+          <p class="paper-desc">
+            An entropy-guided curriculum learning framework for multi-center, multi-modal liver MRI, combining progressive hard-sample learning, MMD-based domain alignment, and an attention-gated mixture of experts.
+          </p>
+          <p class="paper-links">
+            <a href="papers/Jin2026_FibUCL.pdf" target="_blank">PDF</a>
+            <span>/</span>
+            <a href="https://doi.org/10.1007/978-3-032-16271-7_2" target="_blank" rel="noopener noreferrer">Springer</a>
+            <span>/</span>
+            <a href="https://github.com/pazjin/FibUCL" target="_blank" rel="noopener noreferrer">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <a class="paper-thumb" href="papers/Zheng2026_AOAsNet.pdf" target="_blank" aria-label="Open AOAsNet paper PDF">
+          <img src="assets/aoasnet-figure.png" alt="AOAsM architecture from the AOAsNet paper" />
+        </a>
+        <div class="paper-copy">
+          <h3><a href="papers/Zheng2026_AOAsNet.pdf" target="_blank">AOAsNet: A model exploring the correlation of the attention modules is used for medical image classification</a></h3>
+          <p class="authors">Zechen Zheng, <strong>Yuxin Jin</strong>, Huanlong Gao, Xuelei He, Xiaowei He</p>
+          <p class="venue"><em>48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2026)</em>, Toronto, Canada, 2026.</p>
+          <p class="paper-desc">
+            A medical image classification framework that integrates multiple attention mechanisms and learns associations between attention-enhanced and original feature maps through the AOAsM module.
+          </p>
+          <p class="paper-links">
+            <a href="papers/Zheng2026_AOAsNet.pdf" target="_blank">PDF</a>
+            <span>/</span>
+            <a href="https://cmsworkshops.com/EMBC2026/view_paper.php?PaperNum=2118&SessionID=1118" target="_blank" rel="noopener noreferrer">EMBC</a>
+            <span>/</span>
+            <a href="https://github.com/Zhengzechenzzc/AOAsNet" target="_blank" rel="noopener noreferrer">Code</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Research</h2>
+      <div class="research-entry">
+        <h3>Process-Informed Causal Representation Learning</h3>
+        <p class="research-tags">Causal representation learning · Causal discovery · Multi-environment learning</p>
+        <p>
+          I study how latent causal mechanisms can be learned when changes across environments are partly driven by structured, observable processes. The goal is to distinguish stable mechanisms from process-related and environment-specific variation, and to improve causal recovery and generalization across environments.
+        </p>
+      </div>
+      <div class="research-entry">
+        <h3>Robust Learning for Heterogeneous Medical Imaging</h3>
+        <p class="research-tags">Uncertainty · Domain shift · Multimodal learning · Medical AI</p>
+        <p>
+          My earlier research investigated uncertainty-guided curriculum learning, missing-modality classification, multimodal fusion, and medical image generation, with an emphasis on robustness to heterogeneous acquisition conditions and distribution shifts.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <div class="row-list">
+        <div class="row">
+          <div><strong>Northwest University</strong><br /><span>MSc in Computer Science and Technology</span></div>
+          <time>2024–2027</time>
+        </div>
+        <div class="row">
+          <div><strong>Xi’an University of Technology</strong><br /><span>BSc in Artificial Intelligence</span></div>
+          <time>2020–2024</time>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <h2>Selected Awards</h2>
+      <div class="row-list compact">
+        <div class="row"><div>Best Performance Runner-Up Award, CARE 2025 Official Challenge, MICCAI</div><time>2025</time></div>
+        <div class="row"><div>Excellent Award, “Challenge Cup” College Student Entrepreneurship Plan Competition, Northwest University</div><time>2025</time></div>
+        <div class="row"><div>Second Prize, Graduate Electronic Design Contest (Technical Track), Northwest University</div><time>2025</time></div>
+        <div class="row"><div>First Prize, Provincial College Student Innovation and Entrepreneurship Training Program</div><time>2023</time></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Last updated September 2026 · <a href="mailto:pazjin0326@gmail.com">pazjin0326@gmail.com</a></p>
+    </footer>
+  </main>
+</body>
+</html>
