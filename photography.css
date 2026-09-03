@@ -1,0 +1,196 @@
+:root {
+  --text: #252525;
+  --heading: #111;
+  --muted: #646464;
+  --light: #8a8a8a;
+  --line: #e7e7e7;
+  --link: #1d5d96;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { display: block; max-width: 100%; }
+
+.portfolio {
+  width: min(calc(100% - 36px), var(--max-width));
+  margin: 0 auto;
+  padding: 42px 0 42px;
+}
+.topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.topline span { white-space: nowrap; }
+.intro-copy {
+  max-width: 700px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--light);
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0 0 12px;
+  color: var(--heading);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 6vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+.lead {
+  margin: 0;
+  max-width: 640px;
+  color: #3f3f3f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.photo-sequence {
+  display: grid;
+  gap: 16px;
+}
+.gallery-row {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+.gallery-row.one { grid-template-columns: 1fr; }
+.gallery-row.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gallery-row.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gallery-row.two-narrow {
+  grid-template-columns: repeat(2, minmax(0, 0.78fr));
+  justify-content: center;
+}
+.gallery-row.asym { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.72fr); }
+.gallery-row a {
+  display: block;
+  overflow: hidden;
+  background: transparent;
+  text-decoration: none;
+}
+.gallery-row a:hover { text-decoration: none; }
+.gallery-row img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: opacity 160ms ease;
+}
+.gallery-row a:hover img { opacity: 0.95; }
+
+footer {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--light);
+  font-size: 0.84rem;
+}
+footer p { margin: 0; }
+
+.no-scroll { overflow: hidden; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 7, 7, 0.96);
+  padding: 28px 72px;
+}
+.lightbox.is-open { display: flex; }
+.lightbox-figure {
+  margin: 0;
+  max-width: min(92vw, 1500px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-figure img {
+  max-width: 100%;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.lightbox-figure figcaption {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.76rem;
+  margin-top: 9px;
+  text-align: center;
+}
+.lightbox-close,
+.lightbox-nav {
+  position: fixed;
+  z-index: 1001;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+.lightbox-close {
+  right: 22px;
+  top: 14px;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.3rem;
+  padding: 16px;
+}
+.lightbox-prev { left: 8px; }
+.lightbox-next { right: 8px; }
+.lightbox-close:hover,
+.lightbox-nav:hover { color: #fff; }
+
+@media (max-width: 760px) {
+  .portfolio {
+    width: min(calc(100% - 24px), var(--max-width));
+    padding-top: 26px;
+  }
+  .topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+  .intro-copy { margin-bottom: 18px; padding-bottom: 22px; }
+  .photo-sequence { gap: 8px; }
+  .gallery-row { gap: 8px; }
+  .gallery-row.two,
+  .gallery-row.three,
+  .gallery-row.two-narrow,
+  .gallery-row.asym {
+    grid-template-columns: 1fr;
+  }
+  .lightbox { padding: 20px 44px; }
+  .lightbox-nav { font-size: 2.5rem; padding: 8px; }
+}
